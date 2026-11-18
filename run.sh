@@ -8,4 +8,4 @@ module purge
 module load snakemake/9
 
 
-snakemake ${@} --nolock --verbose -p --profile settings/profile.v9+.yaml  --configfile 'settings/config.yaml'
+snakemake ${@} --nolock --verbose -p --profile settings/profile.v9+.yaml
