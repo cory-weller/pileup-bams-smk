@@ -1,0 +1,6 @@
+bam_suffix: '.markdup.sorted.bam'
+
+bam_dirs:
+    - "/data/CARD_AUX/users/paquolaac/projects/iNDI_bulk_RNAseq/processing/nf_20260415iNDI/_o/results/star_salmon"
+
+variantsfile: 'variants.txt'

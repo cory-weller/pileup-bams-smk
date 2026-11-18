@@ -1,0 +1,31 @@
+executor: slurm
+use-envmodules: true
+use-conda: false
+jobs: 200
+local-cores: 1
+latency-wait: 120
+printshellcmds: true
+rerun-incomplete: true
+keep-going: true
+restart-times: 0
+max-jobs-per-second: 1
+max-status-checks-per-second: 0.1
+slurm-keep-successful-logs: true 
+verbose: true
+use-singularity: true
+
+rerun-triggers:
+    - mtime
+    - params               # if parameters change
+    - input                # if input name changes
+    - software-env         # If conda env changes
+    - code                 # if script or shell section changes
+
+default-resources:
+    slurm_partition: norm
+    slurm_account: cookson
+    runtime: 3h
+    tasks: 1
+    cpus_per_task: 1
+    mem_mb: 8000
+    gres: 'lscratch:20'
